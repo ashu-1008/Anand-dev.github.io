@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+    padding: 10px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+    font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+    float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Column container */
+.row {  
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+    -ms-flex: 15%; /* IE10 */
+    flex: 15%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+/* Main column */
+.main {   
+    -ms-flex: 70%; /* IE10 */
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    .row {   
+        flex-direction: column;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+/* Clear floats after the columns */
+.r:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Style the buttons */
+.btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ddd;
+}
+
+.btn.active {
+    background-color: #666;
+    color: white;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="Fridle.jpg" width="100%" height="900">
+</div>
+
+<div class="navbar">
+  <a href="#">About</a>
+  <a href="#">CONTACT</a>
+  <a href="#" class="right">Link</a>
+</div>
+
+<div class="row">
+  <div class="side">
+      <h2>Anand singh chouhan</h2>
+      <h5>Photo of me:</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>A platform for crazy book lovers</p>
+      <h3>More Text</h3>
+      <p>A sample HTML page </p>
+  </div>
+  <div class="main">
+      <div id="btnContainer">
+        <button class="btn" onclick="listView()"><i class="fa fa-bars"></i> List</button> 
+        <button class="btn active" onclick="gridView()"><i class="fa fa-th-large"></i> Grid</button>
+      </div>
+          <br>
+      <div class="r">
+        <div class="column" style="background-color:#bbb;">
+          <div class="dropdown">
+  <img src="p.jpg" alt="Cinque Terre" width="150" height="auto">
+  <div class="dropdown-content">
+    <img src="p.jpg" alt="Cinque Terre" width="300" height="auto">
+  </div>
+</div>
+          <img src="p.jpg" width="150" height="auto">
+        </div>
+        <div class="column" style="background-color:#bbb;">
+          <div class="dropdown">
+  <img src="p.jpg" alt="Cinque Terre" width="150" height="auto">
+  <div class="dropdown-content">
+    <img src="p.jpg" alt="Cinque Terre" width="300" height="auto">
+  </div>
+</div>
+          <b>Some text..</b>
+        </div>
+        <div class="column" style="background-color:#bbb;">
+          <div class="dropdown">
+  <img src="p.jpg" alt="Cinque Terre" width="150" height="auto">
+  <div class="dropdown-content">
+    <img src="p.jpg" alt="Cinque Terre" width="300" height="auto">
+  </div>
+</div>
+          <b>Some text..</b>
+        </div>
+        <div class="column" style="background-color:#bbb;">
+          <div class="dropdown">
+  <img src="p.jpg" alt="Cinque Terre" width="150" height="auto">
+  <div class="dropdown-content">
+    <img src="p.jpg" alt="Cinque Terre" width="300" height="auto">
+  </div>
+</div>
+          <b>Some text..</b>
+        </div>
+      </div>
+
+      <div class="r">
+        <div class="column" style="background-color:#bbb;">
+          <div class="dropdown">
+  <img src="p.jpg" alt="Cinque Terre" width="150" height="auto">
+  <div class="dropdown-content">
+    <img src="p.jpg" alt="Cinque Terre" width="300" height="auto">
+  </div>
+</div>
+          <b>Some text..</b>
+        </div>
+        <div class="column" style="background-color:#bbb;">
+    		<div class="dropdown">
+  <img src="p.jpg" alt="Cinque Terre" width="150" height="auto">
+  <div class="dropdown-content">
+    <img src="p.jpg" alt="Cinque Terre" width="300" height="auto">
+  </div>
+</div>
+    		<b>Some text..</b>
+  		</div>
+  		<div class="column" style="background-color:#bbb;">
+          <div class="dropdown">
+  <img src="p.jpg" alt="Cinque Terre" width="150" height="auto">
+  <div class="dropdown-content">
+    <img src="p.jpg" alt="Cinque Terre" width="300" height="auto">
+  </div>
+</div>
+          <b>Some text..</b>
+        </div>
+        <div class="column" style="background-color:#bbb;">
+          <div class="dropdown">
+  <img src="p.jpg" alt="Cinque Terre" width="150" height="auto">
+  <div class="dropdown-content">
+    <img src="p.jpg" alt="Cinque Terre" width="300" height="auto">
+  </div>
+</div>
+          <b>Some text..</b>
+        </div>
+	  </div>
+  </div>
+
+
+  
+
+
+<script>
+// Get the elements with class="column"
+var elements = document.getElementsByClassName("column");
+
+// Declare a loop variable
+var i;
+
+// List View
+function listView() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.width = "100%";
+  }
+}
+
+// Grid View
+function gridView() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.width = "50%";
+  }
+}
+
+/* Optional: Add active class to the current button (highlight it) */
+var container = document.getElementById("btnContainer");
+var btns = container.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+</body>
+</html>
